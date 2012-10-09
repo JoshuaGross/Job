@@ -1,0 +1,17 @@
+{
+  "name":"job",
+  "version":"0.1",
+  "main": "lib/job.js",
+  "engines":{
+    "node":"0.6",
+    "node":"0.8"
+  }
+  "dependencies":{
+    "redis": "0.8.1",
+    "hiredis": "0.1.14",
+    "kue":"0.4.0"
+  },
+  "plugin": {
+    "provided": ["job"]
+  }
+}
