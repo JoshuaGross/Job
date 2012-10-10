@@ -53,6 +53,24 @@ That's it! Note that your helper method _must take database IDs, not objects_;
 generally, anything passed into the helper method will first be serialized into Redis, and furthermore will be accessed in a different process.
 Thus, things like Mongoose objects or anything that requires lookup in an in-memory cache are out.
 
+Delay the method by calling:
+
+    lib.delay.registrationEmail(ms, 'priority', args)
+
+where `ms` is the number of milliseconds to delay by, and priority is 'low', 'medium', 'high', or 'critical'.
+
+As a job queue server
+---------------------
+Job can also be used as a simple queue server. For example, if you want to perform an operation ASAP but only want to perform X operations simultaneously:
+
+    exports.method = function () { ... }
+    exports.method.delayable = true;
+    exports.method.concurrentProcesses = 5;
+
+Then, you can call `lib.delay.method(0, 'critical', ...)`.
+
+By default, `concurrentProcesses` is 1.
+
 Kue server
 ----------
 Job uses a Kue server to process jobs. The Kue username, password, and port you provide can be used to monitor the status of delayed jobs.
