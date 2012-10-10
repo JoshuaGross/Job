@@ -19,7 +19,7 @@ And wherever you bootstrap your application, you need to require('job') and init
 
     require('job').startJobsRunner({ kue: { username: 'example', password: 'password', port: 2442 }})
 
-Optionally, you may provide the path of an initialization script that will bootstrap the jobs runner, since all delayed jobs are run in a separate process. You may need to initialize a database connection, for example.
+Optionally, you may provide the path of an initialization script that will bootstrap the jobs runner, since all delayed jobs are run in a separate process. You may need to initialize a database connection, for example. In the future I would like to better support Architect plugins to eliminate the need for a dedicated startup script.
 
     require('job').startJobsRunner({ initScript: './init_job_worker.js', kue: { username: 'example', password: 'password', port: 2442 }})
 
