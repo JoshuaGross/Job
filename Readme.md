@@ -53,6 +53,12 @@ That's it! Note that your helper method _must take database IDs, not objects_;
 generally, anything passed into the helper method will first be serialized into Redis, and furthermore will be accessed in a different process.
 Thus, things like Mongoose objects or anything that requires lookup in an in-memory cache are out.
 
+Kue server
+----------
+Job uses a Kue server to process jobs. The Kue username, password, and port you provide can be used to monitor the status of delayed jobs.
+
+For example, if SpanDeX.io had supplied a port of 1234, we could go to SpanDeX.io:1234, type in the username and password, and monitor the health of all delayed jobs.
+
 Contributors
 -----
 Joshua Gross, josh@spandex.io (creator)
