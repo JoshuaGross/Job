@@ -1,6 +1,6 @@
 {
   "name": "job",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Job is a module that allows other modules to expose delayed jobs. For example, instead of mailer.sendRegistrationEmail, you can do mailer.delay.sendRegistrationEmail.",
   "main": "./lib/job.js",
   "plugin": {
@@ -24,7 +24,7 @@
     "scheduled",
     "jobs",
     "jobs",
-    "schedular"
+    "scheduler"
   ],
   "author": "Joshua Gross <josh@spandex.io>",
   "license": "MIT"
