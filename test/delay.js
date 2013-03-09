@@ -1,4 +1,3 @@
-// This is a set of tests for our additions to the database layer
 var job = require('../')
   , expect = require('expect.js');
 
