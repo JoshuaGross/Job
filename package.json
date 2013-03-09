@@ -6,6 +6,10 @@
   "plugin": {
     "provides": ["job"]
   },
+  "devDependencies":{
+    "sinon": "",
+    "expect.js": ""
+  },
   "dependencies":{
     "hiredis": "0.1.14",
     "redis": "0.8.1",
