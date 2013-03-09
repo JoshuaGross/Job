@@ -5,13 +5,14 @@ var emailModule = {
   exports: { }
 };
 emailModule.filename = 'email.js';
-emailModule.exports.name = 'mailLib';
+emailModule.exports.name = 'mailLib2';
 emailModule.exports.emailsSent = 0;
 emailModule.exports.sendMail = function sendMail (email, subject, message) {
   console.log('processing email')
   emailModule.exports.emailsSent++;
 };
 emailModule.exports.sendMail.delayable = true;
+emailModule.exports.sendMail.job_run_manually = true;
 
 describe('job module', function () {
   it('should allow us to register helpers', function (done) {
