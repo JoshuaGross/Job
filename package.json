@@ -1,20 +1,23 @@
 {
   "name": "job",
-  "version": "1.6.3",
+  "version": "1.7.0",
   "description": "Job is a module that allows other modules to expose delayed jobs. For example, instead of mailer.sendRegistrationEmail, you can do mailer.delay.sendRegistrationEmail.",
   "main": "./lib/job.js",
   "plugin": {
-    "provides": ["job"]
+    "provides": [
+      "job"
+    ]
   },
-  "devDependencies":{
+  "devDependencies": {
     "sinon": "",
     "expect.js": ""
   },
-  "dependencies":{
+  "dependencies": {
     "hiredis": "0.1.14",
     "redis": "0.8.1",
-    "kue":"0.5.0",
-    "coffee-script":""
+    "kue": "0.5.0",
+    "coffee-script": "",
+    "coffee-resque": "~0.1.8"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
