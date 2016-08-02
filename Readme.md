@@ -79,7 +79,7 @@ For example, if SpanDeX.io had supplied a port of 1234, we could go to SpanDeX.i
 
 Contributors
 -----
-Joshua Gross, josh@spandex.io (creator)
+Joshua Gross, joshua.gross@gmail.com (creator)
 
 License
 -------
